@@ -1,64 +1,79 @@
 
-(function(){
-})();
+Modernizr.addTest('backgroundclip',function() {
 
-	/////////////////
-	//    SLIDER   //
-	/////////////////
+  var div = document.createElement('div');
 
-// 	(function(){
-// 		if ($('.slider__slide').length > 0) {
-// 			//var count = $('#slider .slider__slide.active').attr('id').split('slide-')[1]-1;
+  if ('backgroundClip' in div.style)
+    return true;
 
-// 			if ($('#slider').attr('data-count') == undefined)
-// 				$('#slider').attr('data-count', 0);
-// 			var count = parseInt($('#slider').attr('data-count'));
+  'Webkit Moz O ms Khtml'.replace(/([A-Za-z]*)/g,function(val) {
+    if (val+'BackgroundClip' in div.style) return true;
+  });
 
-// 			var slidesCount = $('#slider .slider__slide').size()-1;
-// 		}
+});
 
-// 		$('#slider .slider__menu a').on('click', function(e) {
-// 			e.preventDefault();
-// 			if ($('#slider .slider__slide:animated').size()>0) return;
 
-// 			count = $(this).attr('href').split('#slide-')[1]-1;
+$(function(){
 
-// 			$('#slider .slider__slide.active').fadeOut(300, function() {
-// 				$('#slider .slider__slide.active').removeClass('active');
-// 				$('#slider .slider__slide').eq(count).addClass('active');
-// 				$('#slider .slider__slide').eq(count).fadeIn(300);
-// 				//
-// 				$('#slider').attr('data-count', count);
-// 			});
-// 			$('#slider .slider__menu li.active').removeClass('active');
-// 			$('#slider .slider__menu li').eq(count).addClass('active');
-// 		});
+  /////////////////
+  //    SLIDER   //
+  /////////////////
 
-// 		$('#slider .slider__nav a').on('click', function(e) {
-// 			e.preventDefault();
-// 			if ($('#slider .slider__slide:animated').size()>0) return;
+  (function(){
+    if ($('.slider__slide').length > 0) {
+      //var count = $('#slider .slider__slide.active').attr('id').split('slide-')[1]-1;
 
-// 			var direction;
-// 			$(this).hasClass('slider__nav--next') ? direction = 1 : direction = 0;
+      if ($('#slider').attr('data-count') == undefined)
+        $('#slider').attr('data-count', 0);
+      var count = parseInt($('#slider').attr('data-count'));
 
-// 			if (direction == 0)
-// 				(count == 0) ? count = slidesCount + 1 : count = count;
-// 			else
-// 				(count == slidesCount) ? count = - 1 : count = count;
+      var slidesCount = $('#slider .slider__slide').size()-1;
+    }
 
-// 			$('#slider .slider__slide.active').fadeOut(300, function() {
-// 				$(this).removeClass('active');
-// 				(direction == 1) ? count++ : count--;
-// 				$('#slider .slider__slide').eq(count).addClass('active');
-// 				$('#slider .slider__slide').eq(count).fadeIn(300);
-// 				$('#slider .slider__menu li.active').removeClass('active');
-// 				$('#slider .slider__menu li').eq(count).addClass('active');
-// 				///
-// 				$('#slider').attr('data-count', count);
-// 			});
-// 		});
+    $('#slider .slider__menu a').on('click', function(e) {
+      e.preventDefault();
+      if ($('#slider .slider__slide:animated').size()>0) return;
 
-// 	})();
+      count = $(this).attr('href').split('#slide-')[1]-1;
+
+      $('#slider .slider__slide.active').fadeOut(300, function() {
+        $('#slider .slider__slide.active').removeClass('active');
+        $('#slider .slider__slide').eq(count).addClass('active');
+        $('#slider .slider__slide').eq(count).fadeIn(300);
+        //
+        $('#slider').attr('data-count', count);
+      });
+      $('#slider .slider__menu li.active').removeClass('active');
+      $('#slider .slider__menu li').eq(count).addClass('active');
+    });
+
+    $('#slider .slider__nav a').on('click', function(e) {
+      e.preventDefault();
+      if ($('#slider .slider__slide:animated').size()>0) return;
+
+      var direction;
+      $(this).hasClass('slider__nav--next') ? direction = 1 : direction = 0;
+
+      if (direction == 0)
+        (count == 0) ? count = slidesCount + 1 : count = count;
+      else
+        (count == slidesCount) ? count = - 1 : count = count;
+
+      $('#slider .slider__slide.active').fadeOut(300, function() {
+        $(this).removeClass('active');
+        (direction == 1) ? count++ : count--;
+        $('#slider .slider__slide').eq(count).addClass('active');
+        $('#slider .slider__slide').eq(count).fadeIn(300);
+        $('#slider .slider__menu li.active').removeClass('active');
+        $('#slider .slider__menu li').eq(count).addClass('active');
+        ///
+        $('#slider').attr('data-count', count);
+      });
+    });
+
+  })();
+
+});
 
 // 	////////////////////////
 // 	//  PLACEHOLDERS FIX  //
