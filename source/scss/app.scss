@@ -1,3 +1,17 @@
+@keyframes bgani {
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 150%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
+
 
 // Utils
 @import "utils";
@@ -21,6 +35,9 @@
 // Misc
 @import "forms";
 @import "lightbox";
+@import "topbar";
+@import "sections";
+@import "slider";
 
 // Elements
 @import "header";
@@ -33,12 +50,16 @@
 }
 
 body {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Exo 2', Helvetica, Arial, sans-serif;
 	background: $bg-color;
 	line-height: 150%;
 	font-size: $text-size;
 
 	min-width: 960px;
+}
+
+.col-1-2 {
+  @include col(1/2);
 }
 
 a[href^=tel]{
@@ -62,7 +83,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 h1, h2, h3, h4, h5 {
-	font-weight: bold;
+	// font-weight: bold;
 }
 
 h1 {
@@ -115,6 +136,9 @@ a {
 }
 
 .container {
-	position: relative;
-	z-index: 1;
+  &.relative {
+    position: relative;
+  }
+	// position: relative;
+	// z-index: 1;
 }
