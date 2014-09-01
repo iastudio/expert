@@ -4,7 +4,7 @@
   $arr = (array)(json_decode($json));
   if($arr["secret"] == "2f7d9f0d0acf89a8f6a57d79f0f7d475")
   {
-    $email = "ivan@iastudio.ru";
+    $email = "2768072@mail.ru";
     $subject = "Сообщение с сайта Центр Экспертизы";
     $header = "Content-type: text/html; charset=utf-8; \r\n";
 
