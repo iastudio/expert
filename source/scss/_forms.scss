@@ -36,6 +36,10 @@ textarea, .select {
   &:focus {
     @include box-shadow(0 0 30px rgba(#9E856B, 0.5));
   }
+
+  &.error {
+    border-color: red;
+  }
 }
 
 textarea {

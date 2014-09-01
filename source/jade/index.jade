@@ -11,6 +11,142 @@ html(lang='ru').no-js
       section.section-1
         include includes/header
         include includes/slider
-
-      include includes/footer
+      section.section-2#slide-services
+        .container
+          p.intro <strong>Группа компаний Экспертиза</strong> объединяет в себе компании и специалистов в области инженерных изысканий, проектирования, плотно сотрудничая с негосударственной экспертизой проектной документации.
+        .container
+          .col-1-4: a.lightbox__item(href="i/content/awards/1.jpg", data-lightbox="gallery-1"): img(src="i/content/awards/1.jpg")
+          .col-1-4: a.lightbox__item(href="i/content/awards/2.jpg", data-lightbox="gallery-1"): img(src="i/content/awards/2.jpg")
+          .col-1-4: a.lightbox__item(href="i/content/awards/3.jpg", data-lightbox="gallery-1"): img(src="i/content/awards/3.jpg")
+          .col-1-4: a.lightbox__item(href="i/content/awards/3.jpg", data-lightbox="gallery-1"): img(src="i/content/awards/3.jpg")
+        .container.well
+          p СОГЛАСНО ФЗ №337 ОТ 28 НОЯБРЯ 2011 ГОДА ПРИ ПОЛУЧЕНИИ РАЗРЕШЕНИЯ НА СТРОИТЕЛЬСТВО ЗАКЛЮЧЕНИЯ ООО «СТРОИТЕЛЬНАЯ ЭКСПЕРТИЗА» ИМЕЮТ РАВНУЮ ЮРИДИЧЕСКУЮ СИЛУ НА ВСЕЙ ТЕРРИТОРИИ РОССИЙСКОЙ ФЕДЕРАЦИИ С ЗАКЛЮЧЕНИЯМИ ГОСУДАРСТВЕННОЙ ЭКСПЕРТИЗЫ.
+      section.section-3#slide-scheme
+        .container
+          h2 Процесс реализации инвестиционного проекта
+        .container.process
+          .process__item
+            i.process__item__icon.icon-contract
+            p.process__item__caption Заключение договора технического заказчика
+          .process__item
+            i.process__item__icon.icon-tools
+            p.process__item__caption Выполнение инженерных изысканий
+          .process__item
+            i.process__item__icon.icon-ok
+            p.process__item__caption Получение ТУ, град.плана, разрешений
+          .process__item
+            i.process__item__icon.icon-ok
+            p.process__item__caption Получение разрешения на строительство
+          .process__item
+            i.process__item__icon.icon-search
+            p.process__item__caption Негосударственная экспертиза
+          .process__item
+            i.process__item__icon.icon-house-ruler
+            p.process__item__caption Проектирование
+          .process__item
+            i.process__item__icon.icon-barrow
+            p.process__item__caption Строительство
+          .process__item
+            i.process__item__icon.icon-family
+            p.process__item__caption Ввод объекта в эксплуатацию
+          .process__item
+            i.process__item__icon.icon-wireframe
+            p.process__item__caption Кадастровый учет
+        .contactform
+          .container
+            form
+              input(name="name", type="text", placeholder="Ваше имя", required)
+              input(name="tel", type="tel", placeholder="Телефон", required)
+              button получить консультацию
+      section.section-4#slide-benefits
+        .container
+          h2 Наши преимущества
+        .container.benefits
+          .benefits__item
+            .benefits__item__icon(style="font-size:60px;"): i.icon-businessman
+            .benefits__item__content
+              h3 Оперативность
+              ul
+                li Сроки получения разрешения на строительство минимальны, ввиду того что специалисты работают в штате, график реализации проекта контролируется в одном месте.
+                li При размещении заказа у нас, большинство работ можно вести параллельно, что существенно сокращает срок.
+          .benefits__item
+            .benefits__item__icon: i.icon-briefcase
+            .benefits__item__content
+              h3 Профессионализм
+              ul
+                li Имеем все лицензии и допуски на инженерные изыскания, проектирование, кадастровую деятельность. Плотно сотрудничаем с негосударственной экспертизой проектной документации и результатов инженерных изысканий.
+                li Работаем на рынке Приморского края 15 лет.
+          .benefits__item
+            .benefits__item__icon: i.icon-gem
+            .benefits__item__content
+              h3 Результативное сотрудничество
+              ul
+                li Опыт показывает наиболее эффективный подход сотрудничества – работа в комплексе.
+                li Возможность выстраивать диалог проектировщиков и изыскателей с экспертной группой в процессе проверки проектно-изыскательской документации исключает ошибки и «тупиковые ситуации».
+          .benefits__item
+            .benefits__item__icon(style="font-size:60px;"): i.icon-bulb
+            .benefits__item__content
+              h3 Технологичность
+              ul
+                li Работаем в современных программных комплексах, что помогает вносить изменения в проект быстро, что очень важно при прохождении экспертизы.
+          .benefits__item
+            .benefits__item__icon: i.icon-sofa
+            .benefits__item__content
+              h3 Удобство
+              ul
+                li Обращаясь к одному подрядчику, вы получаете услуги инженерных изысканий, проектирования, негосударственной экспертизы в режиме «одно окно».
+                li Оперативный обмен документами в электронном виде.
+      section.section-5.reasons
+        .container
+          h2 Причины работать с нами
+        .container
+          .reasons__item
+            i.icon-calendar
+            .reasons__caption Минимальные сроки
+          .reasons__item
+            i.icon-hands
+            .reasons__caption Результат в виде разрешения<br>на строительство
+          .reasons__item
+            i.icon-binoculars
+            .reasons__caption Контролируете только одного подрядчика
+        .contactform
+          .container
+            form
+              input(name="name", type="text", placeholder="Ваше имя", required)
+              input(name="tel", type="tel", placeholder="Телефон", required)
+              button Начать сотрудничество
+      section.section-6.testimonials#slide-testi
+        .container.relative
+          h2 Отзывы
+          .testi__container
+            .testi__item.active
+              img(src="i/avatar-1.jpg")
+              h2 СТЕРЛИКОВ СТАНИСЛАВ АНАТОЛЬЕВИЧ
+              h3 ДИРЕКТОР ООО «М-АРК»
+              p Проектная организация ООО «М-АРК» г. Владивосток отмечает быструю и качественную работу по подготовке положительного заключения негосударственной экспертизы проектной документации и результатов инженерных изысканий по объекту «Водно - оздоровительный комплекс г. Уссурийск, ул. Комсомольская 89».
+            .testi__item
+              img(src="i/avatar-1.jpg")
+              h2 СТЕРЛИКОВ СТАНИСЛАВ АНАТОЛЬЕВИЧ2
+              h3 ДИРЕКТОР ООО «М-АРК»
+              p Проектная организация ООО «М-АРК» г. Владивосток отмечает быструю и качественную работу по подготовке положительного заключения негосударственной экспертизы проектной документации и результатов инженерных изысканий по объекту «Водно - оздоровительный комплекс г. Уссурийск, ул. Комсомольская 89».
+          .testi__nav
+            a(href="#").testi__arrow.testi__arrows__left: i.icon-arr-left
+            a(href="#").testi__arrow.testi__arrows__right: i.icon-arr-right
+      section.section-7.contacts#slide-contacts
+        .container
+          .contacts__item
+            i.icon-phone-alt
+            p <span>Тел: </span>8 (423) 276 80 72
+          .contacts__item
+            i.icon-mail
+            p <span>Email: </span><a href="mailto:2768072@mail.ru">2768072@mail.ru</a>
+          .contacts__item
+            i.icon-location
+            p <span>Адрес: </span>Ул. Пологая, д. 3<br>(Бизнес-центр "Навигатор"),<br>оф. 509
+        #map
+      #callback-modal.modal
+        form
+          input(name="name", type="text", placeholder="Ваше имя", required)
+          input(name="tel", type="tel", placeholder="Телефон", required)
+          button Заказать звонок
     include includes/tail
