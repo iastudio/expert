@@ -37,8 +37,7 @@ $.modal.defaults = {
  ymaps.ready(function () {
      var myMap = new ymaps.Map('map', {
          center: [43.122709, 131.877427],
-         zoom: 17,
-         offset: [100, 100]
+         zoom: 17
      });
 
      var myPlacemark = new ymaps.Placemark([43.122709, 131.877427], {
